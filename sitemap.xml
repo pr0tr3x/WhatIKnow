@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://pr0tr3x.github.io/WhatIKnow/</loc>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pr0tr3x.github.io/WhatIKnow/help/introduction/</loc>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pr0tr3x.github.io/WhatIKnow/help/linux/snap/</loc>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pr0tr3x.github.io/WhatIKnow/help/linux/useful_commands/</loc>
+         <lastmod>2023-06-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
