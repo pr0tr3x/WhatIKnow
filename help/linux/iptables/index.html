@@ -8,21 +8,25 @@
       
       
       
+        <link rel="canonical" href="https://pr0tr3x.github.io/WhatIKnow/help/linux/iptables/">
       
       
-      <link rel="icon" href="/WhatIKnow/assets/images/favicon.png">
+        <link rel="prev" href="../snap/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
-        <title>pr0tr3x</title>
+        <title>Iptables - pr0tr3x</title>
       
     
     
-      <link rel="stylesheet" href="/WhatIKnow/assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="/WhatIKnow/assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -38,14 +42,25 @@
       
     
     
-    <script>__md_scope=new URL("/WhatIKnow/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -66,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#execute-command-without-internet-access" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -76,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/WhatIKnow/." title="pr0tr3x" class="md-header__button md-logo" aria-label="pr0tr3x" data-md-component="logo">
+    <a href="../../.." title="pr0tr3x" class="md-header__button md-logo" aria-label="pr0tr3x" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -95,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Iptables
             
           </span>
         </div>
@@ -163,7 +183,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/WhatIKnow/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -172,13 +192,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/WhatIKnow/help/introduction/" class="md-tabs__link">
+      <a href="../../introduction/" class="md-tabs__link md-tabs__link--active">
         Knowledge Base
       </a>
     </li>
@@ -206,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/WhatIKnow/." title="pr0tr3x" class="md-nav__button md-logo" aria-label="pr0tr3x" data-md-component="logo">
+    <a href="../../.." title="pr0tr3x" class="md-nav__button md-logo" aria-label="pr0tr3x" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -237,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/WhatIKnow/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -250,16 +272,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -268,7 +290,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Knowledge Base
@@ -281,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/WhatIKnow/help/introduction/" class="md-nav__link">
+      <a href="../../introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -293,16 +315,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -311,7 +333,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           Linux
@@ -324,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/WhatIKnow/help/linux/useful_commands/" class="md-nav__link">
+      <a href="../useful_commands/" class="md-nav__link">
         Useful commands
       </a>
     </li>
@@ -338,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/WhatIKnow/help/linux/snap/" class="md-nav__link">
+      <a href="../snap/" class="md-nav__link">
         Snap
       </a>
     </li>
@@ -350,11 +372,75 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/WhatIKnow/help/linux/iptables/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Iptables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Iptables
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#execute-command-without-internet-access" class="md-nav__link">
+    Execute command without internet access
+  </a>
+  
+    <nav class="md-nav" aria-label="Execute command without internet access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-group" class="md-nav__link">
+    Create new group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-iptables-rule" class="md-nav__link">
+    Add iptables rule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-command" class="md-nav__link">
+    Execute command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -391,6 +477,48 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#execute-command-without-internet-access" class="md-nav__link">
+    Execute command without internet access
+  </a>
+  
+    <nav class="md-nav" aria-label="Execute command without internet access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-group" class="md-nav__link">
+    Create new group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-iptables-rule" class="md-nav__link">
+    Add iptables rule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-command" class="md-nav__link">
+    Execute command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -401,8 +529,80 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+  <h1>Iptables</h1>
+
+<h2 id="execute-command-without-internet-access">Execute command without internet access</h2>
+<h4 id="create-new-group">Create new group</h4>
+<div class="copy highlight"><pre><span></span><code>sudo<span class="w"> </span>addgroup<span class="w"> </span>drop-connect
+</code></pre></div>
+<details class="example">
+<summary>Create new group</summary>
+<div class="highlight"><pre><span></span><code>user@user:~$<span class="w"> </span>sudo<span class="w"> </span>addgroup<span class="w"> </span>drop-connect
+Adding<span class="w"> </span>group<span class="w"> </span><span class="sb">`</span>drop-connect<span class="err">&#39;</span><span class="w"> </span><span class="o">(</span>GID<span class="w"> </span><span class="m">1001</span><span class="o">)</span><span class="w"> </span>...
+Done.
+</code></pre></div>
+</details>
+<h4 id="add-iptables-rule">Add iptables rule</h4>
+<p>For ipv4
+<div class="copy highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-m<span class="w"> </span>owner<span class="w"> </span>--gid-owner<span class="w"> </span>drop-connect<span class="w"> </span>-j<span class="w"> </span>DROP
+</code></pre></div></p>
+<p>For ipv6
+<div class="copy highlight"><pre><span></span><code>sudo<span class="w"> </span>ip6tables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-m<span class="w"> </span>owner<span class="w"> </span>--gid-owner<span class="w"> </span>drop-connect<span class="w"> </span>-j<span class="w"> </span>DROP
+</code></pre></div></p>
+<details class="example">
+<summary>Add rules</summary>
+<div class="highlight"><pre><span></span><code>user@user:~$<span class="w"> </span>sudo<span class="w"> </span>iptables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-m<span class="w"> </span>owner<span class="w"> </span>--gid-owner<span class="w"> </span>drop-connect<span class="w"> </span>-j<span class="w"> </span>DROP
+user@user:~$<span class="w"> </span>sudo<span class="w"> </span>ip6tables<span class="w"> </span>-A<span class="w"> </span>OUTPUT<span class="w"> </span>-m<span class="w"> </span>owner<span class="w"> </span>--gid-owner<span class="w"> </span>drop-connect<span class="w"> </span>-j<span class="w"> </span>DROP
+user@user:~$<span class="w"> </span>sudo<span class="w"> </span>iptables-save
+<span class="c1"># Generated by iptables-save v1.8.7 on Thu Jul 27 14:16:51 2023</span>
+*filter
+:INPUT<span class="w"> </span>ACCEPT<span class="w"> </span><span class="o">[</span><span class="m">0</span>:0<span class="o">]</span>
+:FORWARD<span class="w"> </span>ACCEPT<span class="w"> </span><span class="o">[</span><span class="m">0</span>:0<span class="o">]</span>
+:OUTPUT<span class="w"> </span>ACCEPT<span class="w"> </span><span class="o">[</span><span class="m">0</span>:0<span class="o">]</span>
+-A<span class="w"> </span>OUTPUT<span class="w"> </span>-m<span class="w"> </span>owner<span class="w"> </span>--gid-owner<span class="w"> </span><span class="m">1001</span><span class="w"> </span>-j<span class="w"> </span>DROP
+COMMIT
+<span class="c1"># Completed on Thu Jul 27 14:16:51 2023</span>
+user@user:~$<span class="w"> </span>sudo<span class="w"> </span>ip6tables-save
+<span class="c1"># Generated by ip6tables-save v1.8.7 on Thu Jul 27 14:17:28 2023</span>
+*filter
+:INPUT<span class="w"> </span>ACCEPT<span class="w"> </span><span class="o">[</span><span class="m">0</span>:0<span class="o">]</span>
+:FORWARD<span class="w"> </span>ACCEPT<span class="w"> </span><span class="o">[</span><span class="m">0</span>:0<span class="o">]</span>
+:OUTPUT<span class="w"> </span>ACCEPT<span class="w"> </span><span class="o">[</span><span class="m">0</span>:0<span class="o">]</span>
+-A<span class="w"> </span>OUTPUT<span class="w"> </span>-m<span class="w"> </span>owner<span class="w"> </span>--gid-owner<span class="w"> </span><span class="m">1001</span><span class="w"> </span>-j<span class="w"> </span>DROP
+COMMIT
+<span class="c1"># Completed on Thu Jul 27 14:17:28 2023</span>
+</code></pre></div>
+</details>
+<h4 id="execute-command">Execute command</h4>
+<div class="copy highlight"><pre><span></span><code>sudo<span class="w"> </span>-g<span class="w"> </span>drop-connect<span class="w"> </span>curl<span class="w"> </span>https://google.com
+</code></pre></div>
+<details class="example">
+<summary>Execute</summary>
+<div class="highlight"><pre><span></span><code>user@user:~$ curl https://google.com
+&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;
+&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;H1&gt;301 Moved&lt;/H1&gt;
+The document has moved
+&lt;A HREF=&quot;https://www.google.com/&quot;&gt;here&lt;/A&gt;.
+&lt;/BODY&gt;&lt;/HTML&gt;
+user@user:~$ sudo -g drop-connect curl https://google.com
+curl: (6) Could not resolve host: google.com
+user@user:~$ sudo -g drop-connect curl --connect-timeout 10 https://8.8.8.8
+curl: (28) Connection timeout after 10002 ms
+</code></pre></div>
+</details>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -439,11 +639,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/WhatIKnow/", "features": ["navigation.tabs", "navigation.path", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy"], "search": "/WhatIKnow/assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/WhatIKnow/assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
