@@ -201,7 +201,7 @@
   
     <li class="md-tabs__item">
       <a href="../../introduction/" class="md-tabs__link md-tabs__link--active">
-        Knowledge Base
+        Useful commands
       </a>
     </li>
   
@@ -286,14 +286,14 @@
       
       
         <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          Knowledge Base
+          Useful commands
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Knowledge Base
+          Useful commands
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -346,8 +346,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../useful_commands/" class="md-nav__link">
-        Useful commands
+      <a href="../bash/" class="md-nav__link">
+        Bash
       </a>
     </li>
   
@@ -437,6 +437,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#restoring-iptables-rules-after-reboot" class="md-nav__link">
+    Restoring iptables rules after reboot
+  </a>
+  
+    <nav class="md-nav" aria-label="Restoring iptables rules after reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-iptables-persist-package" class="md-nav__link">
+    Install iptables-persist package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-files-with-rules" class="md-nav__link">
+    Updating files with rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -508,6 +535,33 @@
           <li class="md-nav__item">
   <a href="#execute-command" class="md-nav__link">
     Execute command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restoring-iptables-rules-after-reboot" class="md-nav__link">
+    Restoring iptables rules after reboot
+  </a>
+  
+    <nav class="md-nav" aria-label="Restoring iptables rules after reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-iptables-persist-package" class="md-nav__link">
+    Install iptables-persist package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-files-with-rules" class="md-nav__link">
+    Updating files with rules
   </a>
   
 </li>
@@ -597,6 +651,15 @@ user@user:~$ sudo -g drop-connect curl --connect-timeout 10 https://8.8.8.8
 curl: (28) Connection timeout after 10002 ms
 </code></pre></div>
 </details>
+<h2 id="restoring-iptables-rules-after-reboot">Restoring iptables rules after reboot</h2>
+<h4 id="install-iptables-persist-package">Install <code>iptables-persist</code> package</h4>
+<div class="copy highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>iptables-persistent
+</code></pre></div>
+<p>Any currently erected iptables rules will be saved to the corresponding <code>/etc/iptables/rules.v4</code> and <code>/etc/iptables/rules.v6</code>. </p>
+<h4 id="updating-files-with-rules">Updating files with rules</h4>
+<div class="copy highlight"><pre><span></span><code>sudo<span class="w"> </span>iptables-save<span class="w"> </span>&gt;<span class="w"> </span>/etc/iptables/rules.v4
+sudo<span class="w"> </span>ip6tables-save<span class="w"> </span>&gt;<span class="w"> </span>/etc/iptables/rules.v6
+</code></pre></div>
 
 
 
